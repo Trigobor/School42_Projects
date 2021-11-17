@@ -1,5 +1,4 @@
 #include <iostream>
-#include <ctime>
 #include "Account.hpp"
 
 int Account::_nbAccounts = 0;
@@ -44,7 +43,7 @@ void	Account::makeDeposit(int dep)
 	this->_amount += dep;
 	_totalAmount += dep;
 	_displayTimestamp();
-	std::cout << "index:" << this->_accountIndex << ";p_amount:" << this->_amount \
+	std::cout << "index:" << this->_accountIndex << ";p_amount:" << this->_amount - dep\
 	<< ";deposit:" << dep << ";amount:" << this->_amount \
 	<< ";nb_deposits:"<< this->_nbDeposits << std::endl;
 }
@@ -58,12 +57,25 @@ Account::~Account()
 
 bool	Account::makeWithdrawal(int withdrawal)
 {
+	_displayTimestamp();
 	if (withdrawal > this->_amount)
 	{
+		std::cout << "index:" << this->_accountIndex \
+		<< ";p_amount:" << this->_amount \
+		<< ";withdrawal:refused" << std::endl;
 		return (false);
 	}
 	else
 	{
+		this->_nbWithdrawals++;
+		this->_amount -= withdrawal;
+		_totalAmount -= withdrawal;
+		_totalNbWithdrawals++;
+		std::cout << "index:" << this->_accountIndex \
+		<< ";p_amount:" << this->_amount + withdrawal \
+		<< ";withdrawal:" << withdrawal << ";amount:" \
+		<< this->_amount << ";nb_withdrawal:" \
+		<< this->_nbWithdrawals << std::endl;
 		return (true);
 	}
 }
