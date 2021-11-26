@@ -1,7 +1,8 @@
-NAME	=	Unnecessary_violence
-SRCS	=	main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+NAME	=	Karen
+SRCS	=	main.cpp Karen.cpp
+HEAD	=	Karen.hpp
 SDIR	=	./
-FLAG	=	-Wall -Wextra -Werror
+FLAG	=	-Wall -Wextra -Werror -g
 ODIR	=	objects/
 OBJS	=	$(addprefix $(ODIR), $(SRCS:.cpp=.o))
 COMP	=	clang++
@@ -10,7 +11,7 @@ $(ODIR)%.o :	$(SDIR)%.cpp
 	@mkdir -p $(ODIR)
 	@$(COMP) $(FLAG) -c $< -o $@
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(HEAD)
 	@$(COMP) $(FLAG) -o $(NAME) $(OBJS)
 
 all: $(NAME)
