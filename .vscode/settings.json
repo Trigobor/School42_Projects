@@ -59,6 +59,12 @@
 		"typeinfo": "cpp",
 		"unordered_map": "cpp",
 		"utility": "cpp",
-		"vector": "cpp"
+		"vector": "cpp",
+		"humana.hpp": "c",
+		"weapon.hpp": "c",
+		"fstream": "cpp",
+		"deque": "cpp",
+		"iomanip": "cpp",
+		"stack": "cpp"
 	}
 }
