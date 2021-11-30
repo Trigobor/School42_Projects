@@ -1,8 +1,8 @@
-NAME	=	Fixed
-SRCS	=	main.cpp Fixed.cpp bsp.cpp Point.cpp
+NAME	=	ClapTrap
+SRCS	=	main.cpp ClapTrap.cpp
 SDIR	=	./
 FLAG	=	-Wall -Wextra -Werror
-HEAD	=	Fixed.hpp Point.hpp
+HEAD	=	ClapTrap.hpp
 ODIR	=	objects/
 OBJS	=	$(addprefix $(ODIR), $(SRCS:.cpp=.o))
 COMP	=	clang++
