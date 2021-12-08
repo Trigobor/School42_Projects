@@ -1,8 +1,8 @@
-NAME	=	Identify_real_type
+NAME	=	Iter
 SRCS	=	main.cpp
 SDIR	=	./
 FLAG	=	-Wall -Wextra -Werror
-HEAD	=	Identify.hpp Base.hpp Kids.hpp 
+HEAD	=	iter.hpp 
 ODIR	=	objects/
 OBJS	=	$(addprefix $(ODIR), $(SRCS:.cpp=.o))
 COMP	=	clang++

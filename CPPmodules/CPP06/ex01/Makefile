@@ -1,8 +1,8 @@
 NAME	=	Serialization
-SRCS	=	main.cpp
+SRCS	=	main.cpp Data.cpp
 SDIR	=	./
 FLAG	=	-Wall -Wextra -Werror
-HEAD	=	
+HEAD	=	Data.hpp
 ODIR	=	objects/
 OBJS	=	$(addprefix $(ODIR), $(SRCS:.cpp=.o))
 COMP	=	clang++

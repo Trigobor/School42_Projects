@@ -1,8 +1,8 @@
 NAME	=	Scalar_conversion
-SRCS	=	main.cpp
+SRCS	=	main.cpp Convertion.cpp
 SDIR	=	./
 FLAG	=	-Wall -Wextra -Werror
-HEAD	=	
+HEAD	=	Convertion.hpp
 ODIR	=	objects/
 OBJS	=	$(addprefix $(ODIR), $(SRCS:.cpp=.o))
 COMP	=	clang++
