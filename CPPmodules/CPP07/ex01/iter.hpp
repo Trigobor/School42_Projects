@@ -6,6 +6,7 @@
 template<typename T>
 void	printtmplt(T b)
 {std::cout << "item is: " << b << std::endl;};
+//подумай над тем что если тебе сюда придет жирный вектор, передавай объект ссылкой
 
 template<typename T>
 void	iter(T *a, int len, void (*f)(T b))
