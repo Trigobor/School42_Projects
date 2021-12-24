@@ -1,0 +1,5 @@
+#!/bin/bash
+# This is a comment
+javac Main.java
+java Main $1
+rm Main.class
